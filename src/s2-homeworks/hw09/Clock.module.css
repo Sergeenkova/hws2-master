@@ -1,14 +1,44 @@
 .buttonsContainer {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
 }
 
 .clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 16px;
+  background: #f7f7f7;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  width: max-content;
+  min-width: 240px;
 }
 
 .watch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 18px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  cursor: default;
+  user-select: none;
 }
 
 .watch strong {
+  font-size: 1.45rem;
+  line-height: 1;
+  font-weight: 700;
 }
 
 .more {
+  min-height: 28px;
+  color: #374151;
+  font-size: 0.95rem;
+  text-align: center;
 }
