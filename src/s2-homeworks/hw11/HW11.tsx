@@ -46,6 +46,7 @@ function HW11() {
               {value1}
             </span>
               <SuperRange
+                disableSwap
                 value={[value1, value2]}
                 onChange={change}
               />
