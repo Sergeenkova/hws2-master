@@ -17,14 +17,14 @@ function HW11() {
 
   const change = (event: React.SyntheticEvent | Event, value: number | number[]) => {
     if (Array.isArray(value)) {
-      if (value[0] < value[1]) {
+      //if (value[0] < value[1]) {
       setValue1(value[0]);
       setValue2(value[1]);
-      }
+      //}
     } else {
-      if (value < value2) {
+      //if (value < value2) {
       setValue1(value);
-    }
+    //}
   }
 }
 
@@ -47,8 +47,10 @@ function HW11() {
             <span id={"hw11-value-1"} className={s.number}>
               {value1}
             </span>
-              <SuperRange
+              <SuperRange id={'hw11-double-slider'}
                 disableSwap
+                min={0}
+                max={100}
                 value={[value1, value2]}
                 onChange={change}
               />

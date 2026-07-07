@@ -4,6 +4,8 @@ import React from "react";
 const SuperRange: React.FC<SliderProps> = (props) => {
   return (
     <Slider
+      min={0} 
+      max={100} 
       sx={{
         // Стили для самого слайдера (ширина, отступы)
         width: "100%",
