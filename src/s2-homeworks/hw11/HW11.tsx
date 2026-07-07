@@ -17,8 +17,10 @@ function HW11() {
 
   const change = (event: React.SyntheticEvent | Event, value: number | number[]) => {
     if (Array.isArray(value)) {
+      if (value[0] !== value[1]) {
       setValue1(value[0]);
       setValue2(value[1]);
+      }
     } else {
       if (value < value2) {
       setValue1(value);
