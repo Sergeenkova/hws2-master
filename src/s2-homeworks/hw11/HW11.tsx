@@ -20,9 +20,11 @@ function HW11() {
       setValue1(value[0]);
       setValue2(value[1]);
     } else {
+      if (value < value2) {
       setValue1(value);
     }
-  };
+  }
+}
 
   return (
     <div id={"hw11"}>
