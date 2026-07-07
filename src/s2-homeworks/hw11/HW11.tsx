@@ -15,12 +15,12 @@ function HW11() {
   const [value1, setValue1] = useState(restoreState<number>("hw11-value1", 0));
   const [value2, setValue2] = useState(restoreState<number>("hw11-value2", 100));
 
-  const change = (event: React.SyntheticEvent | Event, value: number | number[]) => {
+  const change = (event: Event, value: number | number[]) => {
     if (Array.isArray(value)) {
-      //if (value[0] < value[1]) {
+      if (value[0] !== value[1]) {
       setValue1(value[0]);
       setValue2(value[1]);
-      //}
+      }
     } else {
       //if (value < value2) {
       setValue1(value);
@@ -38,6 +38,8 @@ function HW11() {
               {value1}
             </span>
               <SuperRange
+                min={0}
+                max={100}
                 id={"hw11-single-slider"}
                 value={value1}
                 onChange={change}
@@ -48,7 +50,7 @@ function HW11() {
               {value1}
             </span>
               <SuperRange id={'hw11-double-slider'}
-                disableSwap
+                //disableSwap
                 min={0}
                 max={100}
                 value={[value1, value2]}
